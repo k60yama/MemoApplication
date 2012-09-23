@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical">
+		    
+		    <TextView 
+		        android:text="@string/new_memo"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" 
+		        android:layout_marginBottom="5dp"/>
+		    
+		    <TableLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content">
+		        <TableRow>
+		            <TextView 
+				        android:text="@string/createDate"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginBottom="5dp" />		    
+				    <TextView 
+				        android:id="@+id/date"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginBottom="5dp" />
+		        </TableRow>
+		    </TableLayout>
+		    
+		    <TextView 
+		        android:text="@string/subjectlabel"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginBottom="5dp" />
+		    
+		    <EditText
+		        android:id="@+id/subject"
+		        android:background="@drawable/border"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginRight="5dp"
+		        android:layout_marginLeft="5dp" />
+		    
+		    <TextView 
+		        android:text="@string/bodylabel"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="20dp"
+		        android:layout_marginBottom="5dp" />
+		    
+		    <EditText 
+		        android:id="@+id/body"
+		        android:gravity="top"
+		        android:background="@drawable/border"
+		        android:layout_width="match_parent"
+		        android:layout_height="200dp" 
+		        android:layout_marginRight="5dp"
+		        android:layout_marginLeft="5dp" />
+		    
+		    <LinearLayout 
+		        android:orientation="horizontal"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		    
+		    <Button 
+		        android:id="@+id/updatebutton"
+		        android:text="@string/updatelabel"
+		        android:layout_width="100dp"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="10dp" />
+		    
+		    <Button 
+		        android:id="@+id/closebutton"
+		        android:text="@string/closelabel"
+		        android:layout_width="100dp"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="10dp" />
+		    
+		    </LinearLayout>	    
+		</LinearLayout>
+</ScrollView>

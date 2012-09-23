@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+	   
+	    <TextView 
+			android:text="@string/new_memo"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" 
+			android:layout_marginBottom="15dp"/>
+	    
+	    <TableLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	        <TableRow
+	            android:layout_marginBottom="15dp">
+	            <TextView 
+	                android:text="@string/createDate"
+	                android:textSize="15dp" />
+	            <TextView 
+	                android:id="@+id/date"
+	                android:width="240dp"
+			        android:layout_marginLeft="15dp"/>
+	        </TableRow>
+	        <TableRow
+	            android:layout_marginBottom="30dp" >
+	            <TextView 
+	                android:text="@string/subjectlabel"
+	                android:textSize="15dp"/>
+	            <TextView 
+	                android:id="@+id/subject"
+	                android:layout_marginLeft="15dp"
+	                android:width="240dp" />
+	        </TableRow>        
+	        <TableRow>
+	            <TextView 
+	                android:text="@string/bodylabel"
+	                android:textSize="15dp" />
+	            <TextView 
+	                android:id="@+id/body"
+	                android:width="240dp"
+			        android:layout_marginLeft="15dp"/>
+	        </TableRow>
+	    </TableLayout>
+	</LinearLayout>
+</ScrollView>

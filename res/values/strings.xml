@@ -1,0 +1,24 @@
+<resources>
+
+    <string name="app_name">メモ帳アプリ</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+	
+	<string name="app_title">MemoApp</string>
+	<string name="new_memo">メモ帳</string>
+    <string name="subjectlabel">件名：</string>
+    <string name="subjecthint">ここに件名を入力してください。</string>
+    <string name="bodylabel">本文：</string>
+    <string name="bodyhint">ここに本文を入力してください。</string>
+    <string name="exec_label">実行モード：</string>
+    <string name="save">保存</string>
+    <string name="email">保存してEメール起動</string>
+    <string name="sendto_label">宛先：</string>
+    <string name="sendto_hint">(例)example@android.com</string>
+    <string name="savelabel">実行</string>
+    <string name="updatelabel">上書き保存</string>
+    <string name="closelabel">閉じる</string>
+    <string name="createDate">作成日時：</string>
+	
+</resources>
