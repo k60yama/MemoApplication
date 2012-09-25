@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -166,7 +167,7 @@ public class MemoActivity extends Activity implements OnClickListener,OnCheckedC
 		}
 		
 		//本文オブジェクトチェック
-		if(body.trim().equals(blank_str)){
+		if(blank_str.equals(body.trim())){
 			err_msg = "Error:本文が未入力です。";
 			itemChk = false;
 			return itemChk;
@@ -212,5 +213,17 @@ public class MemoActivity extends Activity implements OnClickListener,OnCheckedC
 				sendto_obj[i].setVisibility(View.VISIBLE);
 			}
 		}
+	}
+	
+	@Override
+	//back(戻る)ボタン無効化
+	public boolean dispatchKeyEvent(KeyEvent event){
+		if(event.getAction() == KeyEvent.ACTION_DOWN){
+			switch(event.getKeyCode()){
+			case KeyEvent.KEYCODE_BACK:
+				return true;
+			}
+		}
+		return super.dispatchKeyEvent(event);
 	}
 }

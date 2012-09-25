@@ -3,6 +3,7 @@ package com.application.memo;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -53,4 +54,16 @@ public class MemoMain extends Activity {
     	startActivity(intent);
     	return true;
     }
+    
+    @Override
+	//back(–ß‚é)ƒ{ƒ^ƒ“–³Œø‰»
+	public boolean dispatchKeyEvent(KeyEvent event){
+		if(event.getAction() == KeyEvent.ACTION_DOWN){
+			switch(event.getKeyCode()){
+			case KeyEvent.KEYCODE_BACK:
+				return true;
+			}
+		}
+		return super.dispatchKeyEvent(event);
+	}
 }

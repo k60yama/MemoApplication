@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -133,5 +134,17 @@ public class MemoShow extends Activity {
 		//アクティビティ実行
 		startActivity(intent);		
 		return true;
+	}
+	
+	@Override
+	//back(戻る)ボタン無効化
+	public boolean dispatchKeyEvent(KeyEvent event){
+		if(event.getAction() == KeyEvent.ACTION_DOWN){
+			switch(event.getKeyCode()){
+			case KeyEvent.KEYCODE_BACK:
+				return true;
+			}
+		}
+		return super.dispatchKeyEvent(event);
 	}
 }

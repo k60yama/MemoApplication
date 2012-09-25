@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -87,5 +88,17 @@ public class MemoEdit extends Activity implements OnClickListener{
 			//アクティビティ終了
 			finish();
 		}
+	}
+	
+	@Override
+	//back(戻る)ボタン無効化
+	public boolean dispatchKeyEvent(KeyEvent event){
+		if(event.getAction() == KeyEvent.ACTION_DOWN){
+			switch(event.getKeyCode()){
+			case KeyEvent.KEYCODE_BACK:
+				return true;
+			}
+		}
+		return super.dispatchKeyEvent(event);
 	}
 }
